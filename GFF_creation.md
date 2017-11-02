@@ -50,11 +50,11 @@ This output will need to be created into another GFF
 We will use a similar awk script to create a new gff, this time with the end positions from bedtools rather than +49
 
 ```
-cat Fem_DMR_merge.txt | col -b | awk print $1 "\t.\tFem_DMR_merge\t"$2"\t"$3"\t1\t.\t.\t."}' > Fem_DMR_merge.gff
+cat DMR_merge.txt | col -b | awk print $1 "\t.\tDMR_merge\t"$2"\t"$3"\t1\t.\t.\t."}' > DMR_merge.gff
 ```
 
 Now we'll use another awk script to remove windows that are less than 100bp
 
 ```
-cat Fem_DMR_merge.gff | awk '{if(($5-$4)>99) print $0}' > Fem_DMR_merge100.gff
+cat DMR_merge.gff | awk '{if(($5-$4)>99) print $0}' > DMR_merge100.gff
 ```
