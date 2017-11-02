@@ -20,7 +20,7 @@ CHR1    401
 
 To extract the rows of interest and create a GFF I use awk.
 
-# Awk
+## Awk
 
 We want to extract the rows of interest (dmr==1) and create a gff for them. I performed
 
@@ -35,7 +35,7 @@ Chr1    .       DMR1        6501    6550    1       .       .       .
 The columns are Chromosome, ., label, start, end, DMR==1, ., ., .,
 This can now be viewed on Signal Map
 
-# Bedtools
+## Bedtools
 
 Now we want to merge the windows if they are within 100bp. To do this we use Bedtools
 
@@ -45,7 +45,7 @@ bedtools merge -d 100 -i DMR1.gff > DMR_merge.txt
 ```
 This output will need to be created into another GFF
 
-# Awk again
+## Awk again
 
 We will use a similar awk script to create a new gff, this time with the end positions from bedtools rather than +49
 
