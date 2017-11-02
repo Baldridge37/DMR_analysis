@@ -1,5 +1,5 @@
-# Take the the w50.gff files of the tissues you would like to compare into one folder
-# Use the perl mashup script in the group folder to create a TSV document of tissue C, and T values, and scores.
+Take the the w50.gff files of the tissues you would like to compare into one folder
+Use the perl mashup script in the group folder to create a TSV document of tissue C, and T values, and scores.
 
 ```
 source perl-5.16.2 
