@@ -5,5 +5,5 @@ So far this has been copied from Jimmy so it may change somewhat as it is develo
 
 ## Steps
 1. Mashup
-2. Stat1
+2. Stata1
 3. GFF_creation
