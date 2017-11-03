@@ -39,3 +39,22 @@ Compilation failed in require at /nbi/software/testing/bssequel/0.0.1/x86_64/bin
 BEGIN failed--compilation aborted at /nbi/software/testing/bssequel/0.0.1/x86_64/bin/lib/GFF/Tree.pm line 6.
 ```
 
+Our output i_wba.gff will now look like this
+
+```
+CHR1    win     window  110600  110700  0.7440  .       6       ID=1;c=186;t=64;score=4.3652
+CHR1    win     window  678450  678600  0.5071  .       8       ID=10;c=178;t=173;score=4.8196
+CHR1    win     window  3932850 3933050 0.6711  .       20      ID=100;c=51;t=25;score=10.4214
+```
+
+This output is a little different to a normal w50 gff. Instead of `$9` containing c, t, and n it contains score.
+This score is not the same as the score in `$6` but the sum of score in the w1.gff `$7` is n.
+Note that the score is not the sum of scores divided by n, it is all Cs and Ts in the window.
+This can be changed using the `-s score_over_n` option in the script.
+
+Once we have all our wba.gff files we need to mashup again to import to Stata
+```
+source perl-5.16.2 
+perl -S ~/group-data/bin/gff_mashup.pl -c c,t,score -o MASHUP.txt *wba.gff
+```
+This new Mashup file can be imported to Stata
