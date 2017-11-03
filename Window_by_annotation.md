@@ -54,7 +54,7 @@ This can be changed using the `-s score_over_n` option in the script.
 
 Once we have all our wba.gff files we need to mashup again to import to Stata
 ```
-source perl-5.16.2 
+source perl-5.22.1 
 perl -S ~/group-data/bin/gff_mashup.pl -c c,t,score -o MASHUP.txt *wba.gff
 ```
 This new Mashup file can be imported to Stata
