@@ -58,3 +58,18 @@ Now we'll use another awk script to remove windows that are less than 100bp
 ```
 cat DMR_merge.gff | awk '{if(($5-$4)>99) print $0}' > DMR_merge100.gff
 ```
+
+For downstream analysis and ID in column nine is needed. For now I will just number them 1 to n.
+To do this I used another awk script
+
+```
+cat DMR_merge100.gff | awk '{print $1"\t"$2"\t"$3"\t"$4"\t"$5"\t"$6"\t"$7"\t"$8"\t""ID=" NR }' > DMR_merge100ID.gff
+mv DMRmerge100ID.gff DMRmerge100.gff
+```
+NR will insert the row number after `ID=` so now our DMR GFF file looks like this
+
+```
+Chr1    .       DMR_merge100        110600  110700  1       .       .       ID=1
+Chr1    .       DMR_merge100        243650  243800  1       .       .       ID=2
+Chr1    .       DMR_merge100        255800  255900  1       .       .       ID=3
+```
