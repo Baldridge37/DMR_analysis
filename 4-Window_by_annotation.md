@@ -58,3 +58,6 @@ source perl-5.22.1
 perl -S ~/group-data/bin/gff_mashup.pl -c c,t,score -o MASHUP.txt *wba.gff
 ```
 This new Mashup file can be imported to Stata
+
+A good idea is to also include a GFF file with the stop coordinates as the score `$6` so that this inofrmation makes it into the mashup file.
+This will make it easier to create a GFF from the stata output in the next steps.
