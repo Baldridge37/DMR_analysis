@@ -3,9 +3,9 @@
 Once your mashup script has completed your MASHUP.txt file can be loaded into Stata. 
 just go File > Import > Text data (delimited, .csv, ...). My files are tab delimited.
 
-This takes a while so go an put the kettle on.
+This takes a while so go and put the kettle on.
 
-Once it has loaded one can create new columns and variables using `gen`. First off define the tissue types you want to compare.
+Once it has loaded we can create new columns and variables using `gen`. First off define the tissue types you want to compare.
 I want to compare somatic to other tissues so I will create somatic averages of methylation in CG, CHG, and CHH contexts.
 
 ## Averages
