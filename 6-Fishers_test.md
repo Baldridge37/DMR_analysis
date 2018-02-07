@@ -13,7 +13,7 @@ CHR1    243650  243800  588     1890    1996    4334
 To perform Fisher's exact test I used the fisher_exact_test.pl perl script
 ```
 source perl-5.16.2
-perl -s ~/group-data/bin/fisher_exact_test.pl -a 4 -b5 -c6 -d7 -h -i input.txt -o output.txt
+perl -S ~/group-data/bin/fisher_exact_test.pl -a 4 -b5 -c6 -d7 -h -i input.txt -o output.txt
 ```
 
 `-a` and `-b` are tissue1 c and t respectively and `-c` and `-d` are tissue2. -h means header, so the first line is skipped.
